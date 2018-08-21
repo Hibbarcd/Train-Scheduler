@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Train Schedule</title>
+</head>
+
+<body>
+    <div class='container'>
+        <div class="jumbotron myJumbo">
+            <h1 class="display-5 text-center">
+                Train Schedule Calculator</h1>
+            <h3 class="display-7 text-center">Directory of train arrival times</h3>
+            <h4 id="currentTime"></h4>
+        </div>
+        <div class='row'>
+            <div class='col'>
+                <div class="card">
+                    <div class="card-header">
+                    </div>
+                    <div class="card-body">
+                        <table class='table' id='trainList'>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency<br>(min)</th>
+                                <th>First Arrival Today</th>
+                                <th>Next Arrival</th>                                
+                            </tr>
+                            <tr>
+                                <th>(Example)Tram-sylvania Express</th>
+                                <th>Castle Dracula</th>
+                                <th>3600</th>
+                                <th>0200</th>
+                                <th>00:00</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class='col'>
+                <div class="card">
+                    <div class="card-header">
+                        Add train
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group" id="form-field">
+                                <label for="trainName">Train Name</label>
+                                <input type="text" class="form-control" id="trainName" placeholder="">
+                            </div>
+                            <div class="form-group" id="form-field">
+                                <label for="destination">Destination</label>
+                                <br>
+                                <input type="text" class="form-control" id="destination" placeholder="">
+                            </div>
+                            <div class="form-group" id="form-field">
+                                <label for="frequency">Frequency(min)</label>
+                                <input type="number" class="form-control" id="frequency" placeholder="">
+                            </div>
+                            <div class="form-group" id="output-field">
+                                <label for="nextArrival">First Arrival</label>
+                                <input type="value" class="form-control" id="nextArrival" placeholder="0000" value="">
+                            </div>
+                            </div>
+                            <button type="submit" class="btn btn-light float-right" id="submitButton">
+                                Add Train</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row m-3'>
+
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
